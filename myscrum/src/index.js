@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import AppGames from './AppGames';
+import AppRecordChoose from './AppRecordChoose';
+import AppRecordMemory from './AppRecordMemory';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -11,6 +13,8 @@ ReactDOM.render(
         <Switch>
             <Route path="/" exact={true} component={App} />
             <Route path="/games" component={AppGames} />
+            <Route path="/record_choose" component={AppRecordChoose} />
+            <Route path="/record_memory" component={AppRecordMemory} />
         </Switch>
     </ BrowserRouter>
     , document.getElementById('root'));
