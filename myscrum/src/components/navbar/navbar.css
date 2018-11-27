@@ -1,0 +1,11 @@
+.text-color{
+    color: white;
+}
+
+.link-color{
+    color: white;
+}
+
+.link-color :hover{
+    color: black;
+}

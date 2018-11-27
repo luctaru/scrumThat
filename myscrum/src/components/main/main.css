@@ -1,0 +1,14 @@
+body {
+    height: 100%;
+    background-color:aliceblue;
+  }
+
+  .cover-container {
+    margin-bottom: 10.5%;
+    margin-top: 10%;
+    max-width: 42em;
+  }
+
+  .cover {
+    padding: 0 1.5rem;
+  }
