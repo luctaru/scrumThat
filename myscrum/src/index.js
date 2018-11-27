@@ -15,7 +15,6 @@ ReactDOM.render(
         <Switch>
             <Route path="/" exact={true} component={App} />
             <Route path="/games" component={AppGames} />
-
             <Route path="/record_choose" component={AppRecordChoose} />
             <Route path="/record_memory" component={AppRecordMemory} />
 
