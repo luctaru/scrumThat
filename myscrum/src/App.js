@@ -6,7 +6,10 @@ import Footer from './components/footer';
 import Main from './components/main';
 import Jogos from './components/jogos';
 
+
 class App extends Component {
+
+
   render() {
     return (
       <Fragment>
