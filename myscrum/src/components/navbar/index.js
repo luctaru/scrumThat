@@ -18,10 +18,10 @@ class Navbar extends Component {
                                 <a class="nav-link" href="#"><Link class="link-color" style={{ textDecoration: 'none' }} to="/">Inicio</Link> <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#"><Link class="link-color" style={{ textDecoration: 'none' }} to="/Games">Jogos</Link> <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#"><Link class="link-color" style={{ textDecoration: 'none' }} to="/games">Jogos</Link> <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#"><Link class="link-color" style={{ textDecoration: 'none' }} to="/record_choose">Records</Link> <span class="sr-only">(current)</span></a>
                             </li>
                         </ul>
                     </div>
