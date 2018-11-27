@@ -6,7 +6,6 @@ import AppGames from './AppGames';
 
 import AppRecordChoose from './AppRecordChoose';
 import AppRecordMemory from './AppRecordMemory';
-import Memory from './AppMemory';
 
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -19,7 +18,6 @@ ReactDOM.render(
 
             <Route path="/record_choose" component={AppRecordChoose} />
             <Route path="/record_memory" component={AppRecordMemory} />
-            <Route path="/memory_game" component={Memory} />
 
         </Switch>
     </ BrowserRouter>
