@@ -71,9 +71,9 @@ function startGame(){
         stars[i].style.visibility = "visible";
     }
     //reset timer
-    second = 0;
-    minute = 0; 
-    hour = 0;
+    segundos = 0;
+    minutos = 0; 
+    hrs = 0;
     var timer = document.querySelector(".timer");
     timer.innerHTML = "0 mins 0 secs";
     clearInterval(interval);
@@ -152,9 +152,9 @@ function moveCounter(){
     counter.innerHTML = moves;
     //start timer on first click
     if(moves == 1){
-        second = 0;
-        minute = 0; 
-        hour = 0;
+        segundos = 0;
+        minutos = 0; 
+        hrs = 0;
         startTimer();
     }
     // setting rates based on moves
@@ -176,20 +176,20 @@ function moveCounter(){
 
 
 // @description game timer
-var second = 0, minute = 0; hour = 0;
+var segundos = 0, minutos = 0; hrs = 0;
 var timer = document.querySelector(".timer");
 var interval;
 function startTimer(){
     interval = setInterval(function(){
-        timer.innerHTML = minute+"mins "+second+"secs";
-        second++;
-        if(second == 60){
-            minute++;
-            second=0;
+        timer.innerHTML = minutos+"mins "+segundos+"secs";
+        segundos++;
+        if(segundos == 60){
+            minutos++;
+            segundos=0;
         }
-        if(minute == 60){
-            hour++;
-            minute = 0;
+        if(minutos == 60){
+            hrs++;
+            minutos = 0;
         }
     },1000);
 }
