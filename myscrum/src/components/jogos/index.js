@@ -16,7 +16,7 @@ class Jogos extends Component {
                                 <img class="card-img-top" src={ImgPuzzle} height="310px" alt="Card image cap" />
                                 <div class="card-body">
                                     <h5 class="card-title">Backlog Memory</h5>
-                                    <a href="../../../game.html" class="btn btn-light">Iniciar</a>
+                                    <a href="http://localhost:4000/game.html" target="_blank" class="btn btn-light">Iniciar</a>
                                 </div>
                             </div>
                         </div>
