@@ -602,6 +602,7 @@ img{
                 }
             }
         };
+        var pontos = 0;
 
 
         // @description when cards match
@@ -611,6 +612,7 @@ img{
             openedCards[0].classList.remove("show", "open", "no-event");
             openedCards[1].classList.remove("show", "open", "no-event");
             openedCards = [];
+            pontos = pontos +10;
         }
 
 
@@ -625,6 +627,8 @@ img{
                 enable();
                 openedCards = [];
             }, 1100);
+
+            pontos = pontos -12;
         }
 
 
@@ -660,6 +664,7 @@ img{
             }
             // setting rates based on moves
             if (moves > 8 && moves < 12) {
+                pontos = pontos +1;
                 for (i = 0; i < 3; i++) {
                     if (i > 1) {
                         stars[i].style.visibility = "collapse";
@@ -667,6 +672,7 @@ img{
                 }
             }
             else if (moves > 13) {
+                pontos = pontos -2;
                 for (i = 0; i < 3; i++) {
                     if (i > 0) {
                         stars[i].style.visibility = "collapse";
@@ -735,20 +741,14 @@ img{
         }
 
         var cont = 0;
-        var pontos = 0;
 
-        function pontuation(){
-            tempMin = minutos*60;
-            tempTotal = segundos+tempMin;
-
-            pontos = (100 + moves) - tempTotal; 
-            
-        }
+         
+         
 
         function save() {
             firebase.database().ref('RecMemory/'+ ++cont).set({
                 name: $('#namePlayer').val(),
-                pont: pontos
+                pont: pontos + 20
             });
             modal.classList.remove("show");
         }
