@@ -251,7 +251,31 @@ img{
 	width: 50%;
 	font-family: 'Gloria Hallelujah', cursive;
 	color: #ffffff;
-	border-radius: 5px;
+	border-radius: 20px;
+    border-style: none;
+}
+
+#namePlayer{
+    display: block;
+	margin: 0 auto;
+	width: 25%;
+    border-radius: 20px;
+	font-family: 'Gloria Hallelujah', cursive;
+    margin-bottom: 10px;
+}
+
+#save {
+	background-color: #141214;
+	padding: 0.7rem 1rem;
+	font-size: 1.1rem;
+	display: block;
+	margin: 0 auto;
+	width: 25%;
+	font-family: 'Gloria Hallelujah', cursive;
+	color: #ffffff;
+	border-radius: 20px;
+    border-style: none;
+    margin-bottom: 10px;
 }
 
 /* animations */
@@ -711,17 +735,20 @@ img{
         }
 
         var cont = 0;
+        var pontos = 0;
 
         function pontuation(){
             tempMin = minutos*60;
             tempTotal = segundos+tempMin;
+
+            pontos = (100 + moves) - tempTotal; 
             
         }
 
         function save() {
             firebase.database().ref('RecMemory/'+ ++cont).set({
                 name: $('#namePlayer').val(),
-                pont: 100
+                pont: pontos
             });
             modal.classList.remove("show");
         }
